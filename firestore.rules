@@ -1,0 +1,128 @@
+rules_version = '2';
+service cloudfirestore {
+  match /databases/{database}/documents {
+    
+    // 1. Catch-all safety gate
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // 2. Helper primitives
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isEmailVerified() {
+      return request.auth.token.email_verified == true;
+    }
+
+    function isAdmin() {
+      return isSignedIn() && (
+        request.auth.token.email == 'tlsdn9667@gmail.com' ||
+        request.auth.uid == 'guest-admin-id'
+      );
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // 3. Validation blueprints
+    function isValidTheatreWork(data) {
+      return data.id is string && data.id.size() <= 64 &&
+             data.year is string && data.year.size() <= 10 &&
+             data.title is string && data.title.size() <= 200 &&
+             data.synopsis is string && data.synopsis.size() <= 5000;
+    }
+
+    function isValidExhibitionWork(data) {
+      return data.id is string && data.id.size() <= 64 &&
+             data.year is string && data.year.size() <= 10 &&
+             data.title is string && data.title.size() <= 200 &&
+             data.medium is string && data.medium.size() <= 300;
+    }
+
+    function isValidEssayWork(data) {
+      return data.id is string && data.id.size() <= 64 &&
+             data.year is string && data.year.size() <= 10 &&
+             data.title is string && data.title.size() <= 200 &&
+             data.publishedIn is string && data.publishedIn.size() <= 500 &&
+             data.excerpt is string && data.excerpt.size() <= 10000;
+    }
+
+    function isValidNovelWork(data) {
+      return data.id is string && data.id.size() <= 64 &&
+             data.year is string && data.year.size() <= 10 &&
+             data.title is string && data.title.size() <= 200 &&
+             data.publishedIn is string && data.publishedIn.size() <= 500 &&
+             data.excerpt is string && data.excerpt.size() <= 10000;
+    }
+
+    function isValidResidencyItem(data) {
+      return data.id is string && data.id.size() <= 64 &&
+             data.year is string && data.year.size() <= 10 &&
+             data.name is string && data.name.size() <= 200 &&
+             data.period is string && data.period.size() <= 100 &&
+             data.location is string && data.location.size() <= 200;
+    }
+
+    function isValidAwardItem(data) {
+      return data.id is string && data.id.size() <= 64 &&
+             data.year is string && data.year.size() <= 10 &&
+             data.title is string && data.title.size() <= 500 &&
+             (data.category == 'Grants' || data.category == 'Awards' || data.category == 'Selections');
+    }
+
+    // 4. Collections rules
+    match /theatre_works/{workId} {
+      allow read: if true;
+      allow create, update: if isAdmin() && isValidTheatreWork(request.resource.data) && isValidId(workId);
+      allow delete: if isAdmin() && isValidId(workId);
+    }
+
+    match /exhibition_works/{workId} {
+      allow read: if true;
+      allow create, update: if isAdmin() && isValidExhibitionWork(request.resource.data) && isValidId(workId);
+      allow delete: if isAdmin() && isValidId(workId);
+    }
+
+    match /essay_works/{workId} {
+      allow read: if true;
+      allow create, update: if isAdmin() && isValidEssayWork(request.resource.data) && isValidId(workId);
+      allow delete: if isAdmin() && isValidId(workId);
+    }
+
+    match /novel_works/{workId} {
+      allow read: if true;
+      allow create, update: if isAdmin() && isValidNovelWork(request.resource.data) && isValidId(workId);
+      allow delete: if isAdmin() && isValidId(workId);
+    }
+
+    match /residencies/{resId} {
+      allow read: if true;
+      allow create, update: if isAdmin() && isValidResidencyItem(request.resource.data) && isValidId(resId);
+      allow delete: if isAdmin() && isValidId(resId);
+    }
+
+    match /awards/{awardId} {
+      allow read: if true;
+      allow create, update: if isAdmin() && isValidAwardItem(request.resource.data) && isValidId(awardId);
+      allow delete: if isAdmin() && isValidId(awardId);
+    }
+
+    match /cv/{docId} {
+      allow read: if true;
+      allow write: if isAdmin() && isValidId(docId);
+    }
+
+    match /about/{docId} {
+      allow read: if true;
+      allow write: if isAdmin() && isValidId(docId);
+    }
+
+    match /contact/{docId} {
+      allow read: if true;
+      allow write: if isAdmin() && isValidId(docId);
+    }
+  }
+}

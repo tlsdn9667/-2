@@ -1,0 +1,115 @@
+{
+  "entities": {
+    "TheatreWork": {
+      "title": "TheatreWork",
+      "description": "A theatrical play written by Kim Woo Young",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier" },
+        "year": { "type": "string", "description": "Year of production or playwriting" },
+        "title": { "type": "string", "description": "Title of the play" },
+        "synopsis": { "type": "string", "description": "Full synopsis of the play" },
+        "images": { "type": "array", "description": "List of URLs for production photos or script images" },
+        "scriptExcerpt": { "type": "string", "description": "An optional excerpt from the script" },
+        "programBook": { "type": "string", "description": "Information about the program or premiere" },
+        "review": { "type": "string", "description": "Critical review excerpt" },
+        "credits": { "type": "string", "description": "Full production or writing credits" }
+      },
+      "required": ["id", "year", "title", "synopsis"]
+    },
+    "ExhibitionWork": {
+      "title": "ExhibitionWork",
+      "description": "An installation or exhibition piece created by Kim Woo Young",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier" },
+        "year": { "type": "string", "description": "Year of the exhibition" },
+        "title": { "type": "string", "description": "Title of the piece or exhibition" },
+        "medium": { "type": "string", "description": "Materials and type of installation" },
+        "images": { "type": "array", "description": "List of image URLs" },
+        "description": { "type": "string", "description": "Aesthetic or conceptual description" }
+      },
+      "required": ["id", "year", "title", "medium"]
+    },
+    "EssayWork": {
+      "title": "EssayWork",
+      "description": "An essay published by Kim Woo Young",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier" },
+        "year": { "type": "string", "description": "Year of publication" },
+        "title": { "type": "string", "description": "Title of the essay" },
+        "publishedIn": { "type": "string", "description": "Name of publication, journal, or anthology" },
+        "description": { "type": "string", "description": "Short summary or context" },
+        "excerpt": { "type": "string", "description": "Core excerpt or quote" }
+      },
+      "required": ["id", "year", "title", "publishedIn", "excerpt"]
+    },
+    "NovelWork": {
+      "title": "NovelWork",
+      "description": "A novel or short story written by Kim Woo Young",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier" },
+        "year": { "type": "string", "description": "Year of writing or publication" },
+        "title": { "type": "string", "description": "Title of the piece" },
+        "publishedIn": { "type": "string", "description": "Publisher or platform" },
+        "description": { "type": "string", "description": "Short premise or logline" },
+        "excerpt": { "type": "string", "description": "Exemplary excerpt" }
+      },
+      "required": ["id", "year", "title", "publishedIn", "excerpt"]
+    },
+    "ResidencyItem": {
+      "title": "ResidencyItem",
+      "description": "An artist residency completed by the writer",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier" },
+        "year": { "type": "string", "description": "Year of participation" },
+        "name": { "type": "string", "description": "Name of the residency program" },
+        "period": { "type": "string", "description": "Precise duration or dates" },
+        "location": { "type": "string", "description": "City or country" },
+        "outcome": { "type": "string", "description": "Projects completed during the tenure" }
+      },
+      "required": ["id", "year", "name", "period", "location"]
+    },
+    "AwardItem": {
+      "title": "AwardItem",
+      "description": "An award, selection, or creative grant",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier" },
+        "year": { "type": "string", "description": "Year of the honor" },
+        "title": { "type": "string", "description": "Name and institution of the award" },
+        "category": { "type": "string", "enum": ["Grants", "Awards", "Selections"], "description": "Categorization of the honor" }
+      },
+      "required": ["id", "year", "title", "category"]
+    }
+  },
+  "firestore": {
+    "theatre_works": {
+      "schema": "#/entities/TheatreWork",
+      "description": "Store plays, scripts, reviews, and images"
+    },
+    "exhibition_works": {
+      "schema": "#/entities/ExhibitionWork",
+      "description": "Store exhibitions, installation mediums, and images"
+    },
+    "essay_works": {
+      "schema": "#/entities/EssayWork",
+      "description": "Store published essays and letter collections"
+    },
+    "novel_works": {
+      "schema": "#/entities/NovelWork",
+      "description": "Store published novels, short stories, and excerpts"
+    },
+    "residencies": {
+      "schema": "#/entities/ResidencyItem",
+      "description": "Store timeline of artist residencies and outcomes"
+    },
+    "awards": {
+      "schema": "#/entities/AwardItem",
+      "description": "Store timeline of grants, selections, and awards"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "name": "Kim Woo Young Archive",
+  "description": "An elegant, minimalist digital archive showcasing the playwriting, exhibitions, essays, and novels of artist Kim Woo Young.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
