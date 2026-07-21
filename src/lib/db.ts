@@ -716,3 +716,11 @@ export async function logoutAdmin(): Promise<void> {
     }
   }
 }
+
+export function resolveImgUrl(url?: string): string {
+  if (!url) return '';
+  if (url.startsWith('/src/assets/images/')) {
+    return url.replace('/src/assets/images/', '/assets/images/');
+  }
+  return url;
+}

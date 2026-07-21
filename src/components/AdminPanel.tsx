@@ -23,7 +23,8 @@ import {
   getAwards, saveAward, deleteAward,
   getCV, saveCV,
   getAbout, saveAbout,
-  getContact, saveContact
+  getContact, saveContact,
+  resolveImgUrl
 } from '../lib/db';
 import { 
   TheatreWork, ExhibitionWork, EssayWork, NovelWork, ResidencyItem, AwardItem, CVSection, AboutData 
@@ -727,7 +728,7 @@ export default function AdminPanel({ onDataChange, onClose }: AdminPanelProps) {
                             className="group relative aspect-[3/2] bg-black border border-white/10 overflow-hidden rounded-md"
                           >
                             <img 
-                              src={img} 
+                              src={resolveImgUrl(img)} 
                               alt={`Preview ${idx + 1}`} 
                               referrerPolicy="no-referrer"
                               className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"

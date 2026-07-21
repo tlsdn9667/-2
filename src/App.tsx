@@ -23,7 +23,8 @@ import {
   getDatabaseStatus,
   initializeLocalStorage,
   getActiveUser,
-  subscribeToAuth
+  subscribeToAuth,
+  resolveImgUrl
 } from './lib/db';
 import { 
   TheatreWork, ExhibitionWork, EssayWork, NovelWork, ResidencyItem, AwardItem, CVSection 
@@ -420,7 +421,7 @@ export default function App() {
                           <div className="aspect-[3/2] bg-neutral-100 overflow-hidden relative group border border-black/10">
                             {work.images && work.images[0] ? (
                               <img 
-                                src={work.images[0]} 
+                                src={resolveImgUrl(work.images[0])} 
                                 alt={work.title} 
                                 referrerPolicy="no-referrer"
                                 className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 filter grayscale hover:grayscale-0"
@@ -453,7 +454,7 @@ export default function App() {
                         <div className="aspect-[3/2] overflow-hidden bg-neutral-100 border border-black/10 relative">
                           {work.images && work.images[0] ? (
                             <img 
-                              src={work.images[0]} 
+                              src={resolveImgUrl(work.images[0])} 
                               alt={work.title} 
                               referrerPolicy="no-referrer"
                               className="w-full h-full object-cover transition-transform duration-1000 ease-out group-hover:scale-105 filter grayscale"

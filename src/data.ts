@@ -13,7 +13,7 @@ export const initialTheatreWorks: TheatreWork[] = [
     year: '2025',
     title: 'Living Sacrifice',
     synopsis: 'A play inspired by the Gimhae folktale *The Maiden Who Defeated the Monster*, asking what a “surviving sacrifice” might say to the “living sacrifices” who were offered up before her.',
-    images: ['/src/assets/images/living_sacrifice_stage_1784632642341.jpg'],
+    images: ['/assets/images/living_sacrifice_stage_1784632642341.jpg'],
     scriptExcerpt: `[Scene 1: The Altar of Silence]
 
 (The sound of wind sweeping through an old cave. In the center, a simple wooden chair is lit by a cold, sharp spotlight. DAUGHTER stands in the shadow.)
@@ -35,7 +35,7 @@ Yes, I survived. But surviving is a louder question than dying. I walk among the
     year: '2025',
     title: 'Nonda, Nonnon!',
     synopsis: 'In Miryang during the Joseon Dynasty, where the class system was rigid, Songhyeon, who loves to play and perform, joins a Namsadang troupe despite being a woman. Cheongun, Songhyeon’s friend, who wishes she would live an ordinary life, is constantly at odds with her. To mock the yangban who swagger on the strength of their status alone, Songhyeon creates a new form of play called Baekjungnori and asks Cheongun to join her.\n\nIn the present day, Yerim enters the university her parents wanted her to attend, but suffers frequent collapses from hyperventilation. Her dorm roommate suggests that she spend the break resting somewhere she truly wants to go, and Yerim thinks of her grandmother’s home in Miryang. Returning to Miryang for the first time since elementary school, Yerim reunites with Yongu, her childhood friend with whom she once learned Baekjungnori. Yongu, who lives freely doing what he loves at the Baekjungnori Preservation Society headed by Yerim’s grandmother, invites Yerim to perform the Obuk Dance in an upcoming Baekjungnori performance.',
-    images: ['/src/assets/images/script_print_exhibit_1784632678140.jpg'],
+    images: ['/assets/images/script_print_exhibit_1784632678140.jpg'],
     scriptExcerpt: `[Scene 4: The Sound of the Obuk Drum]
 
 (Yerim stands in the courtyard of the Miryang Baekjungnori Preservation Society. She is holding drumsticks, her hands trembling slightly. Yongu stands beside her.)
@@ -56,7 +56,7 @@ Then don’t breathe for the books. Breathe for the skin of this drum. Hit it. H
     year: '2024',
     title: 'Two Wives',
     synopsis: 'In 1951, Miok, who has fled to Busan with her soldier husband, welcomes Seonhwa, a maid hired by her husband to care for her during pregnancy. As Seonhwa moves through the house, she begins pointing out the strange things within it. Through Seonhwa, Miok is forced to confront her own place inside the house and asks for help getting beyond its walls. Having lived by clinging to memories of her girls’ school days, Miok says that before she dies in childbirth, she wants to go back to school. But Seonhwa tells her that the school is gone—and begins to speak of where she herself has come from.',
-    images: ['/src/assets/images/living_sacrifice_stage_1784632642341.jpg'],
+    images: ['/assets/images/living_sacrifice_stage_1784632642341.jpg'],
     scriptExcerpt: `[Scene 2: Inside the Paper House]
 
 MIOK:
@@ -79,7 +79,7 @@ There is no ivy left, Madam. The ivy burned, and the red bricks are buried under
     year: '2024',
     title: 'Where the Clouds Reach',
     synopsis: 'In 18th-century Joseon, Yeona, a gisaeng from Eungcheon, encounters the shaman Seoju and Muyeon, a member of the Joseon diplomatic mission, and begins to pursue sword dance. After being selected as a ceremonial performer for a banquet honoring the mission, she travels to Hanyang with her friend Myeongwol under the name Unsim. There, as Yeona enters a wider artistic world and reunites with Muyeon, Myeongwol becomes entangled with a nobleman obsessed with her. Their conflict leaves Yeona facing a situation in which she may no longer be able to perform the sword dance.',
-    images: ['/src/assets/images/script_print_exhibit_1784632678140.jpg'],
+    images: ['/assets/images/script_print_exhibit_1784632678140.jpg'],
     scriptExcerpt: `[Scene 7: The Sword Dance on the Water]
 
 (Yeona holds two blunt brass swords. She stands at the edge of the river. The reflections of the clouds glide across her white skirt.)
@@ -98,7 +98,7 @@ A sword does not ask who holds it. It only moves where the wind demands. Dance, 
     year: '2023',
     title: 'The Line',
     synopsis: 'At ten o’clock on a bitterly cold night, as the shopping mall closes, people working as paid line stand-ins begin to queue. Behind the small tent belonging to the person in first place, the second spot is occupied by Lee Young, the vocalist of an obscure indie band, who is standing in line on behalf of someone trying to secure a pediatric appointment. The third spot belongs to Sejun, who was recently pressured into resigning after losing his place in line at work to a junior colleague known for being good at queueing; now he is standing in line for a luxury department store.\n\nAs the mall’s opening hour approaches, Sahyeon, who hired Sejun, and Oyun, who hired Lee Young, arrive. Sejun turns out to be Lee Young’s former boyfriend and former bandmate from their university club days, now working at the company owned by his fiancée’s grandfather. He has hired Sejun to buy a luxury handbag as a wedding gift. Oyun, meanwhile, is the wife of the very line stand-in who once took Sejun’s place. Before heading to a famous brunch café—where a clique of high-achieving mothers, including the mother who helped her secure a place at an elite private English kindergarten for her child, regularly gather—she has hired Lee Young to wait in line for a flu shot required for school drop-off. Wanting to be even one place ahead, Sahyeon and Oyun each insist that they are the rightful holder of second place in line.\n\nA security guard appears to hand out queue numbers. When he calls for the owner of the tent in first place and receives no answer, he unzips the tent and steps inside—only to discover the occupant frozen to death.',
-    images: ['/src/assets/images/living_sacrifice_stage_1784632642341.jpg'],
+    images: ['/assets/images/living_sacrifice_stage_1784632642341.jpg'],
     scriptExcerpt: `[Scene 5: The Frozen Boundary]
 
 (The wind howls. The shopping mall lights flicker. Lee Young wraps a thin blanket tighter. Sejun paces up and down.)
@@ -122,7 +122,7 @@ Number one? Wake up. It’s almost seven. Time to get your ticket. (No response.
     year: '2023',
     title: 'Absent Person',
     synopsis: 'Gyeonga, who works as a live-in maid while caring for her mother-in-law Jeonghye and her son Junyoung, has little patience left for Jeonghye, who still waits for Cheolwoo, the husband who vanished five years ago. Having long filled Cheolwoo’s absence with a mutual bitterness, the family begins the day as usual, preparing breakfast—until Cheolwoo suddenly walks through the door with Junyoung, disheveled and looking like a beggar.\n\nIn postwar South Korea, where even the families of those connected to the North are punished under guilt by association, Gyeonga knows that Cheolwoo once went to North Korea with an acquaintance of his independence-activist father. Fearing that Cheolwoo’s return from the North will endanger Junyoung, she tries to drive him out, while Jeonghye is frantic that he might be taken by the police. Then Youngmin—a police officer, the son of Jeonghye’s friend, and a fellow orphanage alum of Gyeonga—knocks on the door.',
-    images: ['/src/assets/images/script_print_exhibit_1784632678140.jpg'],
+    images: ['/assets/images/script_print_exhibit_1784632678140.jpg'],
     scriptExcerpt: `[Scene 3: The Cold Breakfast Table]
 
 JEONGHYE:
@@ -147,7 +147,7 @@ Get out! Get out of this house before the neighborhood sees you!`,
     year: '2022',
     title: 'Beloved Miok',
     synopsis: 'During the Japanese occupation, rumors that unmarried women are being conscripted as military comfort women sweep through a village where weddings become a desperate means of survival. Pressured by the voice of her mother echoing in her mind, Miok enters an unwanted marriage with Gicheol, a distant family acquaintance. But life with Gicheol—coercive, self-centered, and violent in the name of love—soon turns marriage into a prison.\n\nIn 1950, the outbreak of the Korean War offers Miok a chance at freedom. Before leaving for military training, Gicheol takes her to a refuge for the wives of soldiers, a place said to protect women whose husbands have gone to war. There, Miok is reunited with Hyunsu, her former lover, now the director of the home. Unlike Gicheol, Hyunsu offers her genuine care, and Miok finds herself drawn to him once more, even as her mother’s voice—urging her to be corrected, contained, and obedient—grows louder. One day, while helping Hyunsu run the refuge, Miok receives notice of Gicheol’s death.',
-    images: ['/src/assets/images/living_sacrifice_stage_1784632642341.jpg'],
+    images: ['/assets/images/living_sacrifice_stage_1784632642341.jpg'],
     scriptExcerpt: `[Scene 6: The Voice of the Mother]
 
 MOTHER'S VOICE (Echoing):
@@ -167,7 +167,7 @@ Miok, look at me. The gates are open now. Gicheol is not coming back. The war ha
     year: '2016',
     title: 'We’ll do anything for you',
     synopsis: 'Hojun works at an errand service agency. His friend Gichan tells him that Inyoung, the lover of his boss, will be visiting the agency with a request. Inyoung asks Hojun to kill her.',
-    images: ['/src/assets/images/script_print_exhibit_1784632678140.jpg'],
+    images: ['/assets/images/script_print_exhibit_1784632678140.jpg'],
     scriptExcerpt: `[Scene 1: The Request]
 
 HOJUN:
@@ -193,7 +193,7 @@ export const initialExhibitionWorks: ExhibitionWork[] = [
     year: '2025',
     title: 'Living Sacrifice',
     medium: 'vinyl lettering_variable installation',
-    images: ['/src/assets/images/shadow_installation_1784632657498.jpg'],
+    images: ['/assets/images/shadow_installation_1784632657498.jpg'],
     description: 'An installation of theatrical text directly applied as vinyl lettering across the white walls of the museum gallery. The text disappears and reappears based on the shifting angle of natural light entering the space.'
   },
   {
@@ -201,7 +201,7 @@ export const initialExhibitionWorks: ExhibitionWork[] = [
     year: '2025',
     title: 'From the Blackout',
     medium: 'Script collection_variable installation',
-    images: ['/src/assets/images/script_print_exhibit_1784632678140.jpg'],
+    images: ['/assets/images/script_print_exhibit_1784632678140.jpg'],
     description: 'A physical display of script loose-leaves suspended in mid-air by delicate wires. Visitors walk through the floating text, creating small currents of wind that cause the pages to turn and sway, making reading an active bodily navigation.'
   },
   {
@@ -209,7 +209,7 @@ export const initialExhibitionWorks: ExhibitionWork[] = [
     year: '2025',
     title: 'From the Story',
     medium: 'inkjet print on paper_variable installation',
-    images: ['/src/assets/images/script_print_exhibit_1784632678140.jpg'],
+    images: ['/assets/images/script_print_exhibit_1784632678140.jpg'],
     description: 'A series of high-resolution digital prints showcasing redacted historical court logs and folk testimonies, where the names of female victims have been restored in bold ink, while official statements are faded to the threshold of illegibility.'
   },
   {
@@ -217,7 +217,7 @@ export const initialExhibitionWorks: ExhibitionWork[] = [
     year: '2025',
     title: 'Shadow',
     medium: 'Paint on discarded banners_variable installation',
-    images: ['/src/assets/images/shadow_installation_1784632657498.jpg'],
+    images: ['/assets/images/shadow_installation_1784632657498.jpg'],
     description: 'Discarded promotional theater banners from past local performances, painted over with opaque black acrylic paint, leaving only occasional letters and words visible. A critique of the short-lived nature of localized cultural events.'
   },
   {
@@ -225,7 +225,7 @@ export const initialExhibitionWorks: ExhibitionWork[] = [
     year: '2025',
     title: 'From Outside the Story',
     medium: 'Single-channel video_6 minutes',
-    images: ['/src/assets/images/living_sacrifice_stage_1784632642341.jpg'],
+    images: ['/assets/images/living_sacrifice_stage_1784632642341.jpg'],
     description: 'A slow-moving video portrait tracking the hands of local residents as they handle old documents, folklore props, and soil from historical execution sites. Silent, with only the ambient sounds of paper shuffling and breath.'
   },
   {
@@ -233,7 +233,7 @@ export const initialExhibitionWorks: ExhibitionWork[] = [
     year: '2025',
     title: 'From the Mind',
     medium: 'Pen on paper_variable installation',
-    images: ['/src/assets/images/script_print_exhibit_1784632678140.jpg'],
+    images: ['/assets/images/script_print_exhibit_1784632678140.jpg'],
     description: 'A dense map of handwritten notes, historical timelines, and mythological connections written directly onto a 10-meter roll of traditional Korean mulberry paper, displayed across a long minimalist black table.'
   }
 ];
