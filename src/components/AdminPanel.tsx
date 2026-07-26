@@ -313,7 +313,7 @@ export default function AdminPanel({ onDataChange, onClose }: AdminPanelProps) {
     setIsCreatingNew(true);
     const id = `${activeTab}-${Date.now()}`;
     if (activeTab === 'theatre') {
-      setEditingItem({ id, year: '2026', title: '', synopsis: '', images: [], scriptExcerpt: '', programBook: '', review: '', credits: '' });
+      setEditingItem({ id, year: '2026', title: '', synopsis: '', images: [], scriptExcerpt: '', programBook: '', review: '', credits: '', performances: [] });
     } else if (activeTab === 'exhibition') {
       setEditingItem({ id, year: '2026', title: '', medium: '', images: [], description: '' });
     } else if (activeTab === 'essay') {
@@ -554,6 +554,64 @@ export default function AdminPanel({ onDataChange, onClose }: AdminPanelProps) {
                       onChange={(e) => setEditingItem({ ...editingItem, synopsis: e.target.value })}
                       className="w-full bg-neutral-dark border border-white/20 px-4 py-2.5 text-sm focus:outline-none focus:border-white text-white leading-relaxed"
                     />
+                  </div>
+
+                  {/* Performances List */}
+                  <div className="space-y-4">
+                    <label className="block text-[10px] font-mono tracking-widest text-white/50 uppercase">
+                      Performance Schedule / 공연 날짜 & 장소 관리
+                    </label>
+                    <div className="space-y-3">
+                      {(editingItem.performances || []).map((perf: { date: string; location: string }, idx: number) => (
+                        <div key={idx} className="flex gap-2 items-center bg-white/5 p-3 rounded-md">
+                          <input
+                            type="text"
+                            required
+                            placeholder="Date (e.g. 2025.11.13)"
+                            value={perf.date}
+                            onChange={(e) => {
+                              const newPerfs = [...(editingItem.performances || [])];
+                              newPerfs[idx] = { ...newPerfs[idx], date: e.target.value };
+                              setEditingItem({ ...editingItem, performances: newPerfs });
+                            }}
+                            className="flex-1 bg-neutral-dark border border-white/20 px-3 py-1.5 text-xs text-white"
+                          />
+                          <input
+                            type="text"
+                            required
+                            placeholder="Location (e.g. Art Space)"
+                            value={perf.location}
+                            onChange={(e) => {
+                              const newPerfs = [...(editingItem.performances || [])];
+                              newPerfs[idx] = { ...newPerfs[idx], location: e.target.value };
+                              setEditingItem({ ...editingItem, performances: newPerfs });
+                            }}
+                            className="flex-1 bg-neutral-dark border border-white/20 px-3 py-1.5 text-xs text-white"
+                          />
+                          <button
+                            type="button"
+                            onClick={() => {
+                              const newPerfs = (editingItem.performances || []).filter((_: any, i: number) => i !== idx);
+                              setEditingItem({ ...editingItem, performances: newPerfs });
+                            }}
+                            className="text-red-400 hover:text-red-300 p-1 cursor-pointer"
+                            title="Remove Performance"
+                          >
+                            <Trash2 size={14} />
+                          </button>
+                        </div>
+                      ))}
+                      <button
+                        type="button"
+                        onClick={() => {
+                          const newPerfs = [...(editingItem.performances || []), { date: '', location: '' }];
+                          setEditingItem({ ...editingItem, performances: newPerfs });
+                        }}
+                        className="text-xs font-mono tracking-widest uppercase border border-white/20 hover:border-white px-3 py-2 text-white/80 hover:text-white flex items-center gap-1.5 cursor-pointer w-fit"
+                      >
+                        <Plus size={12} /> Add Performance
+                      </button>
+                    </div>
                   </div>
                 </>
               )}

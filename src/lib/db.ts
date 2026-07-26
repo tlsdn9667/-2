@@ -178,7 +178,22 @@ export function getDatabaseStatus(): DBStatus {
 // Load all theatre works
 export async function getTheatreWorks(): Promise<TheatreWork[]> {
   initializeLocalStorage();
-  const fallback = loadLocal('theatre_works', initialTheatreWorks);
+  let fallback = loadLocal('theatre_works', initialTheatreWorks);
+  
+  // Backfill local data if missing
+  let fallbackNeedsSync = false;
+  fallback = fallback.map((item: TheatreWork) => {
+    const original = initialTheatreWorks.find(w => w.id === item.id);
+    if (original && original.performances && (!item.performances || item.performances.length === 0)) {
+      fallbackNeedsSync = true;
+      return { ...item, performances: original.performances };
+    }
+    return item;
+  });
+  if (fallbackNeedsSync) {
+    saveLocal('theatre_works', fallback);
+  }
+
   if (!db || isMockConfig) return fallback;
 
   try {
@@ -192,9 +207,18 @@ export async function getTheatreWorks(): Promise<TheatreWork[]> {
       return fallback;
     }
     const list: TheatreWork[] = [];
-    snap.forEach((docSnap) => {
-      list.push(docSnap.data() as TheatreWork);
-    });
+    for (const docSnap of snap.docs) {
+      let data = docSnap.data() as TheatreWork;
+      const original = initialTheatreWorks.find(w => w.id === data.id);
+      if (original && original.performances && (!data.performances || data.performances.length === 0)) {
+        data = { ...data, performances: original.performances };
+        // Sync back to cloud in background
+        setDoc(doc(db, 'theatre_works', data.id), data).catch(err => 
+          console.warn("Failed to backfill cloud record:", data.id, err)
+        );
+      }
+      list.push(data);
+    }
     // Sort chronologically (descending or by user intent)
     return list.sort((a, b) => b.year.localeCompare(a.year));
   } catch (error) {

@@ -414,6 +414,21 @@ export default function App() {
                               {work.synopsis}
                             </p>
                           </div>
+
+                          {/* Performances */}
+                          {work.performances && work.performances.length > 0 && (
+                            <div className="space-y-3 pt-2">
+                              <span className="text-[10px] font-mono tracking-widest uppercase text-black/40 block">Performances</span>
+                              <div className="space-y-2.5">
+                                {work.performances.map((perf, idx) => (
+                                  <div key={idx} className="flex flex-col sm:flex-row sm:items-baseline gap-1 sm:gap-4 text-xs font-mono border-l-2 border-black/10 pl-3">
+                                    <span className="text-black/50 tracking-wider font-medium">{perf.date}</span>
+                                    <span className="text-black/80 tracking-wide">{perf.location}</span>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+                          )}
                         </div>
 
                         {/* Single Primary Image */}

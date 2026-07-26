@@ -28,7 +28,10 @@ DAUGHTER:
 Yes, I survived. But surviving is a louder question than dying. I walk among the bones of those who were laid here before me. I must speak for the ones who remained silent on this stone.`,
     programBook: '43rd Gyeongsangnam-do Theatre Festival Official Entry. Staged at the Gimhae Cultural Center in October 2025.',
     review: '“A hauntingly beautiful piece of modern tragedy... Kim Woo Young turns folklore into an active, breathing interrogation of survivor’s guilt.” — Gyeongnam Culture Monthly',
-    credits: 'Playwright: Kim Woo Young / Director: Lee Jin-ho / Cast: Kim Sun-young, Park Min-woo / Staged by Daegu Theatre Guild'
+    credits: 'Playwright: Kim Woo Young / Director: Lee Jin-ho / Cast: Kim Sun-young, Park Min-woo / Staged by Daegu Theatre Guild',
+    performances: [
+      { date: '2025.11.13', location: 'Art Space Sarang Farm_Gimhae' }
+    ]
   },
   {
     id: 't-2',
@@ -49,7 +52,11 @@ Then don’t breathe for the books. Breathe for the skin of this drum. Hit it. H
 (Yerim strikes the drum. A deep, resonant boom fills the stage. Songhyeon’s shadow emerges in the background, dancing with the sword.)`,
     programBook: 'Supported by Youth Zipjung Collaboration. Staged in Miryang in September 2025 with the Miryang Traditional Art Group.',
     review: '“A powerful bridge between historical oppression and modern-day psychological claustrophobia.” — Performing Arts Quarterly',
-    credits: 'Playwright: Kim Woo Young / Cast: Han Ji-won, Choi Sung-woo, Kang Min-jung'
+    credits: 'Playwright: Kim Woo Young / Cast: Han Ji-won, Choi Sung-woo, Kang Min-jung',
+    performances: [
+      { date: '2025.10.18', location: 'Arina Dream Theater_Miryang' },
+      { date: '2025.07.05-07.06', location: 'Arina Dream Theater_Miryang' }
+    ]
   },
   {
     id: 't-3',
@@ -72,7 +79,10 @@ SEONHWA:
 There is no ivy left, Madam. The ivy burned, and the red bricks are buried under the mud. Let me show you where we must actually walk.`,
     programBook: 'Staged at Busan Art Space, December 2024. Produced by The Project 1951.',
     review: '“An outstanding minimalist chamber play that exposes the gendered cages of war-era domesticity.” — Modern Theatre Review',
-    credits: 'Playwright: Kim Woo Young / Director: Kim Chae-eun / Cast: Ryu Hyun-a, Yoon Se-ri'
+    credits: 'Playwright: Kim Woo Young / Director: Kim Chae-eun / Cast: Ryu Hyun-a, Yoon Se-ri',
+    performances: [
+      { date: '2024.11.22-11.24', location: 'Hyehwadong Theater Laboratory_Seoul' }
+    ]
   },
   {
     id: 't-4',
@@ -91,7 +101,13 @@ SEOJU:
 A sword does not ask who holds it. It only moves where the wind demands. Dance, Yeona. Let Hanyang see the storm you carried from Eungcheon.`,
     programBook: 'Official entry of the Gyeongsangnam-do Theater Festival. Staged in June 2024.',
     review: '“Stunningly choreographed, with text that is as sharp and glittering as a brass sword.” — Traditional Arts Daily',
-    credits: 'Playwright: Kim Woo Young / Choreography: Park Sun-hee / Cast: Cho Yu-ri, Min Ji-hwan'
+    credits: 'Playwright: Kim Woo Young / Choreography: Park Sun-hee / Cast: Cho Yu-ri, Min Ji-hwan',
+    performances: [
+      { date: '2025.3.22', location: 'Geochang Cultural Center_Geochang' },
+      { date: '2025.04.12-04.13', location: 'Arina Dream Theater_Miryang' },
+      { date: '2024.10.13', location: 'Arina Dream Theater_Miryang' },
+      { date: '2024.10.05-10.06', location: 'Arina Dream Theater_Miryang' }
+    ]
   },
   {
     id: 't-5',
@@ -115,7 +131,10 @@ GUARD:
 Number one? Wake up. It’s almost seven. Time to get your ticket. (No response. He unzips the tent. A long silence.) Oh my god...`,
     programBook: 'Winner of the Korea Theatre Festival One-Act Play Competition (Premium Category). Presented at the Seoul Drama Center in November 2023.',
     review: '“An outstanding, devastating social satire that perfectly captures the hyper-competitive, hollow nature of contemporary urban existence.” — The Seoul Cultural Review',
-    credits: 'Playwright: Kim Woo Young / Cast: Kang Jin-woo, Seo Ye-ji, Lim Ji-hun'
+    credits: 'Playwright: Kim Woo Young / Cast: Kang Jin-woo, Seo Ye-ji, Lim Ji-hun',
+    performances: [
+      { date: '2023.06.28', location: 'Jeju Arts Center Theater_Jeju' }
+    ]
   },
   {
     id: 't-6',
@@ -140,7 +159,10 @@ GYEONGA (Screaming):
 Get out! Get out of this house before the neighborhood sees you!`,
     programBook: 'Staged at the Daehakro Arts Theater in May 2023.',
     review: '“A tight, breathless domestic thriller about political trauma and the violent cost of survival.” — Daehakro Stage Review',
-    credits: 'Playwright: Kim Woo Young / Cast: Shim Hye-jung, Lee Sung-min, Han Tae-young'
+    credits: 'Playwright: Kim Woo Young / Cast: Shim Hye-jung, Lee Sung-min, Han Tae-young',
+    performances: [
+      { date: '2023.11.24', location: 'Seoul Museum of Art Sema Hall_Seoul' }
+    ]
   },
   {
     id: 't-7',
@@ -160,7 +182,10 @@ HYUNSU:
 Miok, look at me. The gates are open now. Gicheol is not coming back. The war has taken his key. You can walk out.`,
     programBook: 'Staged in cooperation with Seoul Art Space, November 2022.',
     review: '“A searing, poetic examination of institutional and domestic violence, beautifully woven through Miok’s inner landscape.” — Korean Drama Forum',
-    credits: 'Playwright: Kim Woo Young / Director: Min Kyung-jun / Cast: Park Ji-a, Yoo Jung-hoon'
+    credits: 'Playwright: Kim Woo Young / Director: Min Kyung-jun / Cast: Park Ji-a, Yoo Jung-hoon',
+    performances: [
+      { date: '2022.11.06', location: 'Marronnier Park Multipurpose Hall_Seoul' }
+    ]
   },
   {
     id: 't-8',
@@ -183,7 +208,10 @@ INYOUNG:
 Because he won’t let me leave. And dying by a stranger's hand is the only way he can't claim my body afterwards.`,
     programBook: 'Winner of the SNUST Creative Writing Award. Staged as an independent workshop in 2016.',
     review: '“A chilling, minimalist neo-noir script that explores the dark desperation of human ownership.” — SNUST Literary Press',
-    credits: 'Playwright: Kim Woo Young / Cast: Lee Jae-sung, Kang Da-eun'
+    credits: 'Playwright: Kim Woo Young / Cast: Lee Jae-sung, Kang Da-eun',
+    performances: [
+      { date: '2016.06.21', location: 'Seoul National University of Science and Technology_Seoul' }
+    ]
   }
 ];
 

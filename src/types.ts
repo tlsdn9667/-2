@@ -3,6 +3,11 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+export interface TheatrePerformance {
+  date: string;
+  location: string;
+}
+
 export interface TheatreWork {
   id: string;
   year: string;
@@ -13,6 +18,7 @@ export interface TheatreWork {
   programBook?: string;
   review?: string;
   credits?: string;
+  performances?: TheatrePerformance[];
 }
 
 export interface ExhibitionWork {
